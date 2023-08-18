@@ -69,10 +69,18 @@ class ItemCollectionService  implements ServiceSubscriberInterface
         return $item;
     }
 
-    public function collect(): array
+    public function collect($unitGram = true): array
     {
         foreach ($this->getCategories() as $category) {
-            $this->collections[$category->getType()] = $category->list();
+            $list = [];
+            if ($unitGram) {
+                $list = $category->list();
+            } else {
+                foreach ($category->list() as $item) {
+                    $list[] = $this->convertUnit($item, false);
+                }
+            }
+            $this->collections[$category->getType()] = $list;
         }
 
         return $this->collections;
