@@ -39,9 +39,13 @@ class FruitService implements CategoryInterface
         $this->list[] = $item;
     }
 
-    public function remove(array $item): int
+    public function remove(array $item): void
     {
-        return 1;
+        $filteredData = array_filter($this->list, function ($value) use ($item) {
+            return $value["name"] !== $item['name'];
+        });
+
+        $this->list = array_values($filteredData);
     }
 
     public function list(): array

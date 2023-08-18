@@ -12,7 +12,7 @@ interface CategoryInterface
 
     public function add(array $item): void;
 
-    public function remove(array $item): int;
+    public function remove(array $item): void;
 
     public function list(): array;
 
