@@ -34,9 +34,9 @@ class FruitService implements CategoryInterface
         return '';
     }
 
-    public function add(array $item): int
+    public function add(array $item): void
     {
-        return 1;
+        $this->list[] = $item;
     }
 
     public function remove(array $item): int

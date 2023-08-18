@@ -10,7 +10,7 @@ interface CategoryInterface
     public function getQuantity(): int;
     public function getUnit(): string;
 
-    public function add(array $item): int;
+    public function add(array $item): void;
 
     public function remove(array $item): int;
 

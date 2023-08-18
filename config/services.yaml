@@ -29,6 +29,6 @@ services:
     App\Service\FruitService:
         tags: [app.category]
 
-    App\Service\ItemCollection:
+    App\Service\ItemCollectionService:
         arguments:
             $implementations: !tagged_iterator app.category
