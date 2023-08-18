@@ -6,7 +6,9 @@ use App\Service\Interface\CategoryInterface;
 
 class VegetableService implements CategoryInterface
 {
-    private array $collection;
+    private array $list = [];
+
+    private string $type = 'vegetable';
 
     public function getId(): int
     {
@@ -20,7 +22,7 @@ class VegetableService implements CategoryInterface
 
     public function getType(): string
     {
-        return '';
+        return $this->type;
     }
 
     public function getQuantity(): int
@@ -44,7 +46,7 @@ class VegetableService implements CategoryInterface
 
     public function list(): array
     {
-        return [];
+        return $this->list;
     }
 }
 

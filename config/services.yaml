@@ -24,8 +24,11 @@ services:
     # please note that last definitions always *replace* previous ones
 
     App\Service\VegetableService:
-        tags: [app.item]
+        tags: [app.category]
 
     App\Service\FruitService:
-        tags: [app.item]
+        tags: [app.category]
 
+    App\Service\ItemCollection:
+        arguments:
+            $implementations: !tagged_iterator app.category
