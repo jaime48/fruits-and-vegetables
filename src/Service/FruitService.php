@@ -34,18 +34,29 @@ class FruitService implements CategoryInterface
         return '';
     }
 
-    public function add(array $item): void
+    public function add(array $fruit): void
     {
-        $this->list[] = $item;
+        $this->list[] = $fruit;
     }
 
-    public function remove(array $item): void
+    public function remove(array $fruit): void
     {
-        $filteredData = array_filter($this->list, function ($value) use ($item) {
-            return $value["name"] !== $item['name'];
+        $filteredData = array_filter($this->list, function ($value) use ($fruit) {
+            return $value["name"] !== $fruit['name'];
         });
 
         $this->list = array_values($filteredData);
+    }
+
+    public function search(string $name): array
+    {
+        $results = [];
+        foreach ($this->list as $fruit) {
+            if (str_contains($fruit['name'], $name)) {
+                $results[] = $fruit;
+            }
+        }
+        return $results;
     }
 
     public function list(): array

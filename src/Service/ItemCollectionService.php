@@ -48,6 +48,12 @@ class ItemCollectionService  implements ServiceSubscriberInterface
         $matchedCategory->remove($item);
     }
 
+    public function search(string $type, string $name): array
+    {
+        $matchedCategory = $this->getCategories()[$type];
+        return $matchedCategory->search($name);
+    }
+
     private function convertUnit($item, $kgToGram = true): array
     {
         if ($kgToGram and $item['unit'] == 'kg') {

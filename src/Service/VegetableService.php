@@ -34,18 +34,29 @@ class VegetableService implements CategoryInterface
         return '';
     }
 
-    public function add(array $item): void
+    public function add(array $vegetable): void
     {
-        $this->list[] = $item;
+        $this->list[] = $vegetable;
     }
 
-    public function remove(array $item): void
+    public function remove(array $vegetable): void
     {
-        $filteredData = array_filter($this->list, function ($value) use ($item) {
-            return $value["name"] !== $item['name'];
+        $filteredData = array_filter($this->list, function ($value) use ($vegetable) {
+            return $value["name"] !== $vegetable['name'];
         });
 
         $this->list = array_values($filteredData);
+    }
+
+    public function search(string $name): array
+    {
+        $results = [];
+        foreach ($this->list as $vegetable) {
+            if (str_contains($vegetable['name'], $name)) {
+                $results[] = $vegetable;
+            }
+        }
+        return $results;
     }
 
     public function list(): array
