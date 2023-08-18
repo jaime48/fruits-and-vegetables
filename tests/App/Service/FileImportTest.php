@@ -9,21 +9,22 @@ use PHPUnit\Framework\TestCase;
 
 class FileImportTest extends TestCase
 {
-    public function testFileImport() {
+    public function testFileImport()
+    {
         $jsonArray = [
             [
-                "id" => 1,
-                "name" => "Carrot",
-                "type" => "vegetable",
-                "quantity" => 100,
-                "unit" => "g",
+                'id' => 1,
+                'name' => 'Carrot',
+                'type' => 'vegetable',
+                'quantity' => 100,
+                'unit' => 'g',
             ],
             [
-                "id" => 2,
-                "name" => "Apple",
-                "type" => "fruit",
-                "quantity" => 200,
-                "unit" => "g",
+                'id' => 2,
+                'name' => 'Apple',
+                'type' => 'fruit',
+                'quantity' => 200,
+                'unit' => 'g',
             ],
         ];
 

@@ -19,3 +19,6 @@
 .phpunit.result.cache
 ###< phpunit/phpunit ###
 .idea/
+###> friendsofphp/php-cs-fixer ###
+/.php-cs-fixer*
+###< friendsofphp/php-cs-fixer ###

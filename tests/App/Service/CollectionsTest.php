@@ -18,7 +18,8 @@ class CollectionsTest extends TestCase
         $this->itemCollectionService = new ItemCollectionService([new FruitService(), new VegetableService()]);
     }
 
-    public function testUnitConvert() {
+    public function testUnitConvert()
+    {
         $reflection = new \ReflectionClass($this->itemCollectionService);
         $convertUnitMethod = $reflection->getMethod('convertUnit');
         $convertUnitMethod->setAccessible(true);
@@ -34,44 +35,44 @@ class CollectionsTest extends TestCase
         $this->assertEquals($expected, $result);
     }
 
-    public function testCollections() {
+    public function testCollections()
+    {
         $jsonArray = [
             [
-                "id" => 1,
-                "name" => "Carrot",
-                "type" => "vegetable",
-                "quantity" => 100,
-                "unit" => "g",
+                'id' => 1,
+                'name' => 'Carrot',
+                'type' => 'vegetable',
+                'quantity' => 100,
+                'unit' => 'g',
             ],
             [
-                "id" => 2,
-                "name" => "Apple",
-                "type" => "fruit",
-                "quantity" => 200,
-                "unit" => "g",
+                'id' => 2,
+                'name' => 'Apple',
+                'type' => 'fruit',
+                'quantity' => 200,
+                'unit' => 'g',
             ],
         ];
 
-        $expected =  [
-            "vegetable" => [
+        $expected = [
+            'vegetable' => [
                 [
-                    "id" => 1,
-                    "name" => "Carrot",
-                    "type" => "vegetable",
-                    "quantity" => 100,
-                    "unit" => "g",
-                ]
+                    'id' => 1,
+                    'name' => 'Carrot',
+                    'type' => 'vegetable',
+                    'quantity' => 100,
+                    'unit' => 'g',
+                ],
             ],
-            "fruit" =>
-                [
+            'fruit' => [
                     [
-                        "id" => 2,
-                        "name" => "Apple",
-                        "type" => "fruit",
-                        "quantity" => 200,
-                        "unit" => "g",
-                    ]
-                ]
+                        'id' => 2,
+                        'name' => 'Apple',
+                        'type' => 'fruit',
+                        'quantity' => 200,
+                        'unit' => 'g',
+                    ],
+                ],
         ];
 
         $this->itemCollectionService->add($jsonArray);
@@ -79,75 +80,76 @@ class CollectionsTest extends TestCase
         $this->assertEquals($expected, $result);
     }
 
-    public function testRemoveItems() {
+    public function testRemoveItems()
+    {
         $jsonArray = [
             [
-                "id" => 1,
-                "name" => "Carrot",
-                "type" => "vegetable",
-                "quantity" => 100,
-                "unit" => "g",
+                'id' => 1,
+                'name' => 'Carrot',
+                'type' => 'vegetable',
+                'quantity' => 100,
+                'unit' => 'g',
             ],
             [
-                "id" => 2,
-                "name" => "Apple",
-                "type" => "fruit",
-                "quantity" => 200,
-                "unit" => "g",
+                'id' => 2,
+                'name' => 'Apple',
+                'type' => 'fruit',
+                'quantity' => 200,
+                'unit' => 'g',
             ],
         ];
 
-        $expected =  [
-            "vegetable" => [
+        $expected = [
+            'vegetable' => [
             ],
-            "fruit" =>
-                [
+            'fruit' => [
                     [
-                        "id" => 2,
-                        "name" => "Apple",
-                        "type" => "fruit",
-                        "quantity" => 200,
-                        "unit" => "g",
-                    ]
-                ]
+                        'id' => 2,
+                        'name' => 'Apple',
+                        'type' => 'fruit',
+                        'quantity' => 200,
+                        'unit' => 'g',
+                    ],
+                ],
         ];
 
         $this->itemCollectionService->add($jsonArray);
         $this->itemCollectionService->remove($jsonArray[0]);
-        $result =  $this->itemCollectionService->collect();
+        $result = $this->itemCollectionService->collect();
         $this->assertEquals($expected, $result);
     }
 
-    public function testSearchItem() {
+    public function testSearchItem()
+    {
         $jsonArray = [
             [
-                "id" => 1,
-                "name" => "Carrot",
-                "type" => "vegetable",
-                "quantity" => 100,
-                "unit" => "g",
+                'id' => 1,
+                'name' => 'Carrot',
+                'type' => 'vegetable',
+                'quantity' => 100,
+                'unit' => 'g',
             ],
             [
-                "id" => 2,
-                "name" => "Apple",
-                "type" => "fruit",
-                "quantity" => 200,
-                "unit" => "g",
+                'id' => 2,
+                'name' => 'Apple',
+                'type' => 'fruit',
+                'quantity' => 200,
+                'unit' => 'g',
             ],
         ];
 
         $expected = [
             [
-                "id" => 2,
-                "name" => "Apple",
-                "type" => "fruit",
-                "quantity" => 200,
-                "unit" => "g",
-            ]
+                'id' => 2,
+                'name' => 'Apple',
+                'type' => 'fruit',
+                'quantity' => 200,
+                'unit' => 'g',
+            ],
         ];
 
         $this->itemCollectionService->add($jsonArray);
-        $result =  $this->itemCollectionService->search('fruit', 'Apple');
+        $result = $this->itemCollectionService->search('fruit', 'Apple');
         $this->assertEquals($expected, $result);
     }
 }
