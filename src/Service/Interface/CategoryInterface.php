@@ -12,4 +12,6 @@ interface CategoryInterface
 
     public function list(): array;
 
+    public function search(string $name): array;
+
 }
