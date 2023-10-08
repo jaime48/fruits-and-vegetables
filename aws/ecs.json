@@ -33,8 +33,6 @@
     "requiresCompatibilities": [
         "EC2"
     ],
-    "cpu": "1",
-    "memory": "256",
     "pidMode": "host",
     "ipcMode": "host",
     "runtimePlatform": {
