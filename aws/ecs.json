@@ -1,5 +1,5 @@
 {
-    "family": "",
+    "family": ""my-ecs-task",
     "taskRoleArn": "",
     "executionRoleArn": "",
     "networkMode": "bridge",
@@ -30,76 +30,16 @@
             "entryPoint": [
                 ""
             ],
-            "command": [
-                ""
-            ],
-            "environment": [
-                {
-                    "name": "",
-                    "value": ""
-                }
-            ],
-            "environmentFiles": [
-                {
-                    "value": "",
-                    "type": "s3"
-                }
-            ],
-            "mountPoints": [
-                {
-                    "sourceVolume": "",
-                    "containerPath": "",
-                    "readOnly": true
-                }
-            ],
             "volumesFrom": [
                 {
                     "sourceContainer": "",
                     "readOnly": true
                 }
             ],
-            "linuxParameters": {
-                "capabilities": {
-                    "add": [
-                        ""
-                    ],
-                    "drop": [
-                        ""
-                    ]
-                },
-                "devices": [
-                    {
-                        "hostPath": "",
-                        "containerPath": "",
-                        "permissions": [
-                            "read"
-                        ]
-                    }
-                ],
-                "initProcessEnabled": true,
-                "sharedMemorySize": 0,
-                "tmpfs": [
-                    {
-                        "containerPath": "",
-                        "size": 0,
-                        "mountOptions": [
-                            ""
-                        ]
-                    }
-                ],
-                "maxSwap": 0,
-                "swappiness": 0
-            },
             "secrets": [
                 {
                     "name": "",
                     "valueFrom": ""
-                }
-            ],
-            "dependsOn": [
-                {
-                    "containerName": "",
-                    "condition": "START"
                 }
             ],
             "startTimeout": 0,
@@ -148,15 +88,6 @@
                         "valueFrom": ""
                     }
                 ]
-            },
-            "healthCheck": {
-                "command": [
-                    ""
-                ],
-                "interval": 0,
-                "timeout": 0,
-                "retries": 0,
-                "startPeriod": 0
             },
             "systemControls": [
                 {
