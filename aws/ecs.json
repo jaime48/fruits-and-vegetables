@@ -12,20 +12,13 @@
             },
             "cpu": 1,
             "memory": 256,
-            "startTimeout": 0,
-            "stopTimeout": 0,
+            "startTimeout": 2,
+            "stopTimeout": 2,
             "disableNetworking": true,
             "privileged": true,
             "readonlyRootFilesystem": true,
             "interactive": true,
-            "pseudoTerminal": true,
-            "ulimits": [
-                {
-                    "name": "core",
-                    "softLimit": 0,
-                    "hardLimit": 0
-                }
-            ]
+            "pseudoTerminal": true
         }
     ],
     "volumes": [
