@@ -95,12 +95,6 @@
                     "value": ""
                 }
             ],
-            "resourceRequirements": [
-                {
-                    "value": "",
-                    "type": "GPU"
-                }
-            ],
             "firelensConfiguration": {
                 "type": "fluentd",
                 "options": {
@@ -127,16 +121,6 @@
                 },
                 "labels": {
                     "KeyName": ""
-                }
-            },
-            "efsVolumeConfiguration": {
-                "fileSystemId": "",
-                "rootDirectory": "",
-                "transitEncryption": "ENABLED",
-                "transitEncryptionPort": 0,
-                "authorizationConfig": {
-                    "accessPointId": "",
-                    "iam": "ENABLED"
                 }
             },
             "fsxWindowsFileServerVolumeConfiguration": {
@@ -168,16 +152,6 @@
     ],
     "pidMode": "host",
     "ipcMode": "host",
-    "proxyConfiguration": {
-        "type": "APPMESH",
-        "containerName": "",
-        "properties": [
-            {
-                "name": "",
-                "value": ""
-            }
-        ]
-    },
     "inferenceAccelerators": [
         {
             "deviceName": "",
