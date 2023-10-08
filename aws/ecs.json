@@ -10,89 +10,22 @@
             "repositoryCredentials": {
                 "credentialsParameter": ""
             },
-            "cpu": 0,
-            "memory": 0,
+            "cpu": 1,
+            "memory": 256,
             "memoryReservation": 0,
-            "links": [
-                ""
-            ],
-            "essential": true,
-            "entryPoint": [
-                ""
-            ],
-            "volumesFrom": [
-                {
-                    "sourceContainer": "",
-                    "readOnly": true
-                }
-            ],
-            "secrets": [
-                {
-                    "name": "",
-                    "valueFrom": ""
-                }
-            ],
             "startTimeout": 0,
             "stopTimeout": 0,
-            "hostname": "",
-            "user": "",
-            "workingDirectory": "",
             "disableNetworking": true,
             "privileged": true,
             "readonlyRootFilesystem": true,
-            "dnsServers": [
-                ""
-            ],
-            "dnsSearchDomains": [
-                ""
-            ],
-            "extraHosts": [
-                {
-                    "hostname": "",
-                    "ipAddress": ""
-                }
-            ],
-            "dockerSecurityOptions": [
-                ""
-            ],
             "interactive": true,
             "pseudoTerminal": true,
-            "dockerLabels": {
-                "KeyName": ""
-            },
             "ulimits": [
                 {
                     "name": "core",
                     "softLimit": 0,
                     "hardLimit": 0
                 }
-            ],
-            "logConfiguration": {
-                "logDriver": "json-file",
-                "options": {
-                    "KeyName": ""
-                },
-                "secretOptions": [
-                    {
-                        "name": "",
-                        "valueFrom": ""
-                    }
-                ]
-            },
-            "systemControls": [
-                {
-                    "namespace": "",
-                    "value": ""
-                }
-            ],
-            "firelensConfiguration": {
-                "type": "fluentd",
-                "options": {
-                    "KeyName": ""
-                }
-            },
-            "credentialSpecs": [
-                ""
             ]
         }
     ],
@@ -126,22 +59,10 @@
     "requiresCompatibilities": [
         "EC2"
     ],
-    "cpu": "",
-    "memory": "",
-    "tags": [
-        {
-            "key": "",
-            "value": ""
-        }
-    ],
+    "cpu": "1",
+    "memory": "256",
     "pidMode": "host",
     "ipcMode": "host",
-    "inferenceAccelerators": [
-        {
-            "deviceName": "",
-            "deviceType": ""
-        }
-    ],
     "ephemeralStorage": {
         "sizeInGiB": 0
     },
