@@ -33,7 +33,7 @@
             "name": "my-volume",
             "dockerVolumeConfiguration": {
                 "scope": "task",
-                "autoprovision": true,
+                "autoprovision": true
             }
         }
     ],
