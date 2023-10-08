@@ -108,7 +108,7 @@
     ],
     "volumes": [
         {
-            "name": "",
+            "name": "my-volume",
             "host": {
                 "sourcePath": ""
             },
