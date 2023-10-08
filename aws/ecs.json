@@ -1,5 +1,5 @@
 {
-    "family": ""my-ecs-task",
+    "family": "my-ecs-task",
     "taskRoleArn": "",
     "executionRoleArn": "",
     "networkMode": "bridge",
