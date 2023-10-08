@@ -12,7 +12,6 @@
             },
             "cpu": 1,
             "memory": 256,
-            "memoryReservation": 0,
             "startTimeout": 0,
             "stopTimeout": 0,
             "disableNetworking": true,
@@ -32,27 +31,9 @@
     "volumes": [
         {
             "name": "my-volume",
-            "host": {
-                "sourcePath": ""
-            },
             "dockerVolumeConfiguration": {
                 "scope": "task",
                 "autoprovision": true,
-                "driver": "",
-                "driverOpts": {
-                    "KeyName": ""
-                },
-                "labels": {
-                    "KeyName": ""
-                }
-            },
-            "fsxWindowsFileServerVolumeConfiguration": {
-                "fileSystemId": "",
-                "rootDirectory": "",
-                "authorizationConfig": {
-                    "credentialsParameter": "",
-                    "domain": ""
-                }
             }
         }
     ],
@@ -63,9 +44,6 @@
     "memory": "256",
     "pidMode": "host",
     "ipcMode": "host",
-    "ephemeralStorage": {
-        "sizeInGiB": 0
-    },
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "WINDOWS_SERVER_2019_FULL"
