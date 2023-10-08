@@ -57,7 +57,7 @@
       "EC2"
     ],
     "taskDefinitionArn": "arn:aws:ecs:eu-north-1:052965246833:task-definition/ecs-task:1",
-    "family": "ecs-task-github-action",
+    "family": "ecs-task-github-action-new",
     "requiresAttributes": [
       {
         "targetId": null,
